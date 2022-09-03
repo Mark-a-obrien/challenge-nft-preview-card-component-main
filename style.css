@@ -1,0 +1,161 @@
+:root {
+    --color-primary-Soft-blue: hsl(215, 51%, 70%);
+    --color-primary-Cyan: hsl(178, 100%, 50%);
+    --color-neutral-main-BG: hsl(217, 54%, 11%);
+    --color-neutral-card-BG: hsl(216, 50%, 16%);
+    --color-neutral-line: hsl(215, 32%, 27%);
+    --color-neutral-White: hsl(0, 0%, 100%);
+
+    --ff-primary: 'Outfit', sans-serif;
+    --fs-para: 18px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+.ff-primary {
+    font-family: var(--ff-primary);
+}
+
+main.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-neutral-main-BG);
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 375px;
+    background-color: var(--color-neutral-card-BG);
+    gap: 1.2rem;
+    padding: 1.8rem;
+    border-radius: 14px;
+}
+
+#equilibrium {
+    border-radius: 10px;
+    background-image: url("images/image-equilibrium.jpg");
+    background-size: cover;
+    height: 310px;
+    
+    background-color: var(--color-primary-Cyan);
+}
+
+#view {
+    background-color: var(--color-primary-Cyan);
+    height: 100%;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+#view-icon {
+    position: relative;
+    top: 125px;
+    left: 128px;
+    width: 64px;
+    height: 64px;
+}
+
+h1.header {
+    font-size: 20px;
+    color: var(--color-neutral-White);
+    transition: all .5s ease;
+}
+
+p.para {
+    font-size: var(--fs-para);
+    color: var(--color-primary-Soft-blue);
+    font-weight: 300;
+}
+
+.eth-and-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.eth-and-time div {
+    display: flex;
+    gap: 6px;
+}
+
+p#eth {
+    color: var(--color-primary-Cyan);
+}
+
+p#time {
+    color: var(--color-primary-Soft-blue);
+}
+
+.line {
+    height: 1px;
+    background-color: var(--color-neutral-line);
+    width: 100%;
+}
+
+div.author {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--color-primary-Soft-blue);
+}
+
+
+#avatar {
+    width:28px;
+    height:28px;
+    outline: 1px solid var(--color-neutral-White);
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+p#name {  
+    color: var(--color-neutral-White);
+    transition: all .5s ease;
+}
+
+
+h1.header:hover, #name:hover {
+    color: var(--color-primary-Cyan);
+    cursor: pointer;
+}
+
+#view:hover {
+    opacity: .5;
+}
+
+
+
+
+
+
+
+@media (max-width: 376px) {
+
+    main.content {
+        width: 100%;
+        padding: 1.4rem;
+    }
+
+    .card { 
+        width: 100%; 
+        padding: 1.5rem;
+   } 
+
+   #equilibrium {
+    width: 100%;
+    height: 290px;
+   }
+
+   #view-icon {
+    top: 110px;
+    left: 116px;
+   }
+   
+}
